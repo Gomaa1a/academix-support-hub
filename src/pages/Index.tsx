@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, User } from "lucide-react";
+import { Mail, Phone, User, Instagram } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -156,6 +156,26 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Footer Section with Instagram Logo */}
+      <footer className="py-8 bg-black/50 text-center">
+        <div className="container mx-auto px-4">
+          <a 
+            href="https://www.instagram.com/academix.ai/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="inline-block hover:opacity-75 transition-opacity"
+          >
+            <Instagram 
+              size={48} 
+              color="#F97316" 
+              strokeWidth={1.5} 
+              className="mx-auto"
+            />
+          </a>
+          <p className="mt-4 text-gray-300 text-sm">Follow us on Instagram</p>
+        </div>
+      </footer>
     </div>;
 };
 
