@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
+
 const Index = () => {
   const [isLoading, setIsLoading] = useState(false);
   const {
@@ -15,6 +16,7 @@ const Index = () => {
     email: "",
     country: ""
   });
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
@@ -50,6 +52,7 @@ const Index = () => {
       setIsLoading(false);
     }
   };
+
   return <div className="min-h-screen bg-[#0a0a0a] text-white">
       {/* Hero Section */}
       <div className="relative h-screen flex items-center justify-center bg-gradient-to-br from-[#0a0a0a] to-[#1a1a1a]">
@@ -86,6 +89,17 @@ const Index = () => {
               <h3 className="text-xl font-semibold mb-4 text-slate-50">Custom Solutions</h3>
               <p className="text-gray-300">Tailored support systems designed specifically for your educational institution</p>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Chatbot CTA Section */}
+      <section className="py-20 bg-gradient-to-b from-gray-900/30 to-black/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold mb-6">Try Our AI Assistant Now</h2>
+            <p className="text-xl text-gray-300 mb-8">Experience instant support with our AI chatbot. Click the chat icon in the bottom right corner to get started.</p>
+            <p className="text-orange-500 animate-pulse">Click the chat bubble to begin →</p>
           </div>
         </div>
       </section>
@@ -144,4 +158,5 @@ const Index = () => {
       </section>
     </div>;
 };
+
 export default Index;
