@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Mail, Phone, User, Instagram } from "lucide-react";
 import { Card } from "@/components/ui/card";
@@ -57,6 +58,14 @@ const Index = () => {
       {/* Hero Section */}
       <div className="relative h-screen flex items-center justify-center bg-gradient-to-br from-[#0a0a0a] to-[#1a1a1a]">
         <div className="absolute inset-0 overflow-hidden">
+          <iframe 
+            src='https://my.spline.design/claritystream-0aVVGhItH0P2O00okjOlmLnE/' 
+            frameBorder='0' 
+            width='100%' 
+            height='100%'
+            title="Spline Background"
+            className="pointer-events-none"
+          />
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-orange-500/20 to-transparent opacity-30" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
