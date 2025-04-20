@@ -1,4 +1,3 @@
-
 import { useRef, useState } from "react";
 import { Mail, Phone, User, Instagram } from "lucide-react";
 import { Card } from "@/components/ui/card";
@@ -18,7 +17,6 @@ const Index = () => {
     country: "",
   });
 
-  // Refs to scroll
   const servicesRef = useRef<HTMLDivElement>(null);
   const demoRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
@@ -74,7 +72,6 @@ const Index = () => {
         onScrollToContact={() => handleScroll(contactRef)}
       />
 
-      {/* HERO SECTION */}
       <section className="min-h-screen flex items-center justify-center pt-16 bg-gradient-to-b from-[#141111] to-[#18150e] relative">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold mb-8 tracking-tighter bg-gradient-to-r from-white to-orange-500/80 bg-clip-text text-transparent">
@@ -103,7 +100,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* OUR SERVICES */}
       <section ref={servicesRef} id="services" className="py-20 bg-black/50 scroll-mt-16">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Our Services</h2>
@@ -136,7 +132,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* DEMO */}
       <section ref={demoRef} id="demo" className="py-20 bg-gradient-to-b from-gray-900/30 to-black/50 scroll-mt-16">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
@@ -149,22 +144,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* SPLINE ANIMATION SECTION */}
-      <section className="w-full flex justify-center items-center py-12 bg-transparent">
-        <div className="w-full max-w-4xl h-[350px] lg:h-[500px] rounded-xl overflow-hidden shadow-xl border border-orange-500/20">
-          <iframe
-            src="https://my.spline.design/interactiveaistartupheropage-FnUv5SiiASFFIygik0QjKRBX/"
-            frameBorder="0"
-            width="100%"
-            height="100%"
-            className="w-full h-full"
-            allow="autoplay"
-            title="Radial Pattern Animation"
-          ></iframe>
-        </div>
-      </section>
-
-      {/* VIDEO */}
       <section className="py-20 bg-gradient-to-b from-black/50 to-gray-900/30">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">See ACADEMIX.AI in Action</h2>
@@ -178,7 +157,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CONTACT FORM */}
       <section ref={contactRef} id="contact" className="py-20 bg-black/50 scroll-mt-16">
         <div className="container mx-auto px-4">
           <div className="max-w-xl mx-auto">
