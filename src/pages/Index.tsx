@@ -153,7 +153,7 @@ const Index = () => {
       <section className="w-full flex justify-center items-center py-12 bg-transparent">
         <div className="w-full max-w-4xl h-[350px] lg:h-[500px] rounded-xl overflow-hidden shadow-xl border border-orange-500/20">
           <iframe
-            src="https://my.spline.design/radialpattern-IrznQhJ0KytJLB3IvEyVbJmb/"
+            src="https://my.spline.design/interactiveaistartupheropage-FnUv5SiiASFFIygik0QjKRBX/"
             frameBorder="0"
             width="100%"
             height="100%"
