@@ -1,17 +1,14 @@
-
 import { useState } from "react";
 import { Mail, Phone, User, Instagram } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
-import { BackgroundPaths } from "@/components/ui/background-paths";
+import { Navbar } from "@/components/ui/navbar";
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -55,11 +52,22 @@ const Index = () => {
     }
   };
 
-  return <div className="min-h-screen bg-[#0a0a0a] text-white">
-      {/* Hero Section - Replaced with BackgroundPaths */}
-      <BackgroundPaths title="ACADEMIX.AI" />
+  return (
+    <div className="min-h-screen bg-[#0a0a0a] text-white">
+      <Navbar />
 
-      {/* Services Section */}
+      <section className="min-h-screen flex items-center justify-center pt-16">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold mb-8 tracking-tighter 
+            bg-gradient-to-r from-white to-orange-500/80 bg-clip-text text-transparent">
+            ACADEMIX.AI
+          </h1>
+          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-6 text-lg">
+            Discover Excellence
+          </Button>
+        </div>
+      </section>
+
       <section className="py-20 bg-black/50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Our Services</h2>
@@ -80,7 +88,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Chatbot CTA Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900/30 to-black/50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
@@ -91,7 +98,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Video Section */}
       <section className="py-20 bg-gradient-to-b from-black/50 to-gray-900/30">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">See ACADEMIX.AI in Action</h2>
@@ -101,7 +107,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Form Section */}
       <section className="py-20 bg-black/50">
         <div className="container mx-auto px-4">
           <div className="max-w-xl mx-auto">
@@ -144,26 +149,24 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer Section with Instagram Logo */}
-      <footer className="py-8 bg-black/50 text-center">
+      <footer className="py-12 bg-black/50 text-center">
         <div className="container mx-auto px-4">
           <a 
             href="https://www.instagram.com/academix.ai/" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="inline-block hover:opacity-75 transition-opacity"
+            className="inline-block transition-transform hover:scale-110"
           >
             <Instagram 
               size={48} 
-              color="#F97316" 
-              strokeWidth={1.5} 
-              className="mx-auto"
+              className="text-orange-500 hover:text-orange-400 transition-colors"
             />
+            <p className="mt-4 text-gray-300 text-sm">Follow us on Instagram</p>
           </a>
-          <p className="mt-4 text-gray-300 text-sm">Follow us on Instagram</p>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
 
 export default Index;
