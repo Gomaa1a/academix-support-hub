@@ -149,6 +149,21 @@ const Index = () => {
         </div>
       </section>
 
+      {/* SPLINE ANIMATION SECTION */}
+      <section className="w-full flex justify-center items-center py-12 bg-transparent">
+        <div className="w-full max-w-4xl h-[350px] lg:h-[500px] rounded-xl overflow-hidden shadow-xl border border-orange-500/20">
+          <iframe
+            src="https://my.spline.design/radialpattern-IrznQhJ0KytJLB3IvEyVbJmb/"
+            frameBorder="0"
+            width="100%"
+            height="100%"
+            className="w-full h-full"
+            allow="autoplay"
+            title="Radial Pattern Animation"
+          ></iframe>
+        </div>
+      </section>
+
       {/* VIDEO */}
       <section className="py-20 bg-gradient-to-b from-black/50 to-gray-900/30">
         <div className="container mx-auto px-4">
