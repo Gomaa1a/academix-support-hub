@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 import { Navbar } from "@/components/ui/navbar";
 import { Footer } from "@/components/ui/footer";
+import { AnimatedHero } from "@/components/AnimatedHero";
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -72,33 +73,11 @@ const Index = () => {
         onScrollToContact={() => handleScroll(contactRef)}
       />
 
-      <section className="min-h-screen flex items-center justify-center pt-16 bg-gradient-to-b from-[#141111] to-[#18150e] relative">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold mb-8 tracking-tighter bg-gradient-to-r from-white to-orange-500/80 bg-clip-text text-transparent">
-            ACADEMIX.AI
-          </h1>
-          <div className="flex flex-col gap-4 sm:flex-row sm:justify-center w-full max-w-lg mx-auto">
-            <Button
-              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-6 text-lg shadow-md transition-transform hover:scale-105"
-              onClick={() => handleScroll(servicesRef)}
-            >
-              Services
-            </Button>
-            <Button
-              className="bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white px-8 py-6 text-lg shadow-md transition-transform hover:scale-105"
-              onClick={() => handleScroll(demoRef)}
-            >
-              Demo
-            </Button>
-            <Button
-              className="bg-white/10 hover:bg-white/20 text-orange-400 border border-orange-400 px-8 py-6 text-lg shadow-md transition-transform hover:scale-105"
-              onClick={() => handleScroll(contactRef)}
-            >
-              Contact
-            </Button>
-          </div>
-        </div>
-      </section>
+      <AnimatedHero
+        onScrollToServices={() => handleScroll(servicesRef)}
+        onScrollToDemo={() => handleScroll(demoRef)}
+        onScrollToContact={() => handleScroll(contactRef)}
+      />
 
       <section ref={servicesRef} id="services" className="py-20 bg-black/50 scroll-mt-16">
         <div className="container mx-auto px-4">
