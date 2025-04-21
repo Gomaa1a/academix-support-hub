@@ -11,6 +11,7 @@ interface AnimatedHeroProps {
 export const AnimatedHero = ({ onScrollToServices, onScrollToDemo, onScrollToContact }: AnimatedHeroProps) => {
   return (
     <section className="min-h-screen flex items-center justify-center pt-16 bg-gradient-to-b from-[#141111] to-[#18150e] relative overflow-hidden">
+      {/* Background orbs animation */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -40,6 +41,57 @@ export const AnimatedHero = ({ onScrollToServices, onScrollToDemo, onScrollToCon
         ))}
       </motion.div>
 
+      {/* Left side images */}
+      <motion.div 
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="absolute left-0 top-1/2 -translate-y-1/2 hidden lg:block"
+      >
+        <div className="relative">
+          <motion.img
+            src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+            alt="Tech Interface"
+            className="w-64 h-48 object-cover rounded-r-lg shadow-2xl mb-4"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          />
+          <motion.img
+            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+            alt="AI Interaction"
+            className="w-48 h-64 object-cover rounded-r-lg shadow-2xl ml-8"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          />
+        </div>
+      </motion.div>
+
+      {/* Right side images */}
+      <motion.div 
+        initial={{ x: 100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="absolute right-0 top-1/2 -translate-y-1/2 hidden lg:block"
+      >
+        <div className="relative">
+          <motion.img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+            alt="Code Interface"
+            className="w-64 h-48 object-cover rounded-l-lg shadow-2xl mb-4"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          />
+          <motion.img
+            src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+            alt="AI Assistant"
+            className="w-48 h-64 object-cover rounded-l-lg shadow-2xl mr-8"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          />
+        </div>
+      </motion.div>
+
+      {/* Main content */}
       <div className="container mx-auto px-4 text-center relative z-10">
         <motion.h1
           initial={{ y: 50, opacity: 0 }}
